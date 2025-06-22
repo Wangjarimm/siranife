@@ -106,7 +106,7 @@ async function openFollowUp(id) {
 
   try {
     const res = await fetch(
-      `http://localhost:8080/api/reports/${id}/followup`,
+      `https://sirani.vercel.app/api/reports/${id}/followup`,
       {
         method: "PUT",
         headers: {
