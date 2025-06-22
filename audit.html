@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIRANI Admin Panel - Audit</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/css/audit.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <header>
+    <h1>SIRANI Admin Panel</h1>
+    <p>Kelola Sistem, Pengguna, dan Audit</p>
+  </header>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="role.html">Role & Akses</a>
+    <a class="active" href="audit.html">Audit Trail</a>
+    <a href="#" class="text-danger" id="logoutBtn">Logout</a>
+  </nav>
+
+  <div class="stat-box">
+    <h4>Audit Trail</h4>
+    <table class="table table-bordered" id="logTable">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Route</th>
+          <th>Method</th>
+          <th>Waktu</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="pagination" class="pagination-controls"></div>
+  </div>
+  <script src="src/js/audit.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIRANI Admin Panel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/css/dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+  <header>
+    <h1>SIRANI Admin Panel</h1>
+    <p>Kelola Sistem, Pengguna, dan Audit</p>
+  </header>
+
+  <nav>
+    <a class="active" href="dashboard.html">Dashboard</a>
+    <a href="role.html">Role & Akses</a>
+    <a href="audit.html">Audit Trail</a>
+    <a href="#" id="logoutBtn" class="text-danger">Logout</a>
+  </nav>
+
+  <div class="stat-box">
+    <h4>Dashboard Utama Admin</h4>
+    <p>Statistik laporan dan aktivitas pengguna:</p>
+    <ul>
+      <li>Total Laporan Masuk: <strong id="totalReports">Memuat...</strong></li>
+      <li>Laporan Prioritas Tinggi: <strong id="highPriorityReports">Memuat...</strong></li>
+      <li>Operator Aktif: <strong id="activeOperators">Memuat...</strong></li>
+    </ul>
+
+    <table class="table table-bordered" id="reportTable">
+      <thead>
+        <tr>
+          <th>Waktu</th>
+          <th>Wilayah</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data akan dimasukkan oleh JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  <script src="src/js/dashboard.js"></script>
+</body>
+</html>

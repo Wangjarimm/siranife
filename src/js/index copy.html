@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRANI - Laporan Anak Terlindungi</title>
+
+  <link rel="stylesheet" href="./src/css/index.css">
+  <!-- Font: Poppins Serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- FaceAPI.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>SIRANI</h2>
+    <button id="sosBtn">🔴 Tombol SOS</button>
+    <video id="video" autoplay muted></video>
+    <form id="reportForm">
+      <label for="message">Apa yang kamu alami?</label>
+      <textarea id="message" rows="4" placeholder="Ceritakan pengalamanmu di sini..."></textarea>
+      <button type="submit">Kirim Laporan</button>
+    </form>
+    <div id="responseBox" class="response-box" style="display:none;"></div>
+  </div>
+
+  <script src="../../index.html"></script>
+  <script>
+    
+  </script>
+</body>
+</html>
