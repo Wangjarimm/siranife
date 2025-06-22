@@ -1,24 +1,55 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 body {
-      background: #f0f6ff;
-      font-family: 'Poppins', sans-serif;
-    }
-    .login-box {
-      max-width: 400px;
-      margin: 80px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-    .login-box h2 {
-      color: #0c4e91;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .btn-primary {
-      background-color: #0c4e91;
-      border: none;
-    }
-    .btn-primary:hover {
-      background-color: #08396a;
-    }
+  background: #f0f6ff;
+  font-family: 'Poppins', serif;
+  margin: 0;
+  padding: 0;
+}
+
+.login-box {
+  max-width: 400px;
+  width: 100%;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.login-box h2 {
+  color: #0c4e91;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #0c4e91;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #08396a;
+}
+
+/* RESPONSIVE STYLE */
+@media (max-width: 576px) {
+  .login-box {
+    padding: 30px 20px;
+    margin: 40px auto;
+  }
+
+  .login-box h2 {
+    font-size: 20px;
+  }
+
+  .form-label,
+  .form-control {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

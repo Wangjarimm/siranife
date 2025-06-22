@@ -23,15 +23,16 @@
     <a href="#" id="logoutBtn" class="text-danger">Logout</a>
   </nav>
 
-  <div class="stat-box">
-    <h4>Dashboard Utama Admin</h4>
-    <p>Statistik laporan dan aktivitas pengguna:</p>
-    <ul>
-      <li>Total Laporan Masuk: <strong id="totalReports">Memuat...</strong></li>
-      <li>Laporan Prioritas Tinggi: <strong id="highPriorityReports">Memuat...</strong></li>
-      <li>Operator Aktif: <strong id="activeOperators">Memuat...</strong></li>
-    </ul>
+  <div class="container stat-box">
+  <h4>Dashboard Utama Admin</h4>
+  <p>Statistik laporan dan aktivitas pengguna:</p>
+  <ul>
+    <li>Total Laporan Masuk: <strong id="totalReports">Memuat...</strong></li>
+    <li>Laporan Prioritas Tinggi: <strong id="highPriorityReports">Memuat...</strong></li>
+    <li>Operator Aktif: <strong id="activeOperators">Memuat...</strong></li>
+  </ul>
 
+  <div class="table-responsive">
     <table class="table table-bordered" id="reportTable">
       <thead>
         <tr>
@@ -45,6 +46,8 @@
       </tbody>
     </table>
   </div>
+</div>
+
   <script src="src/js/dashboard.js"></script>
 </body>
 </html>

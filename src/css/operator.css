@@ -1,79 +1,129 @@
- 
-    body {
-      font-family: 'Poppins', serif;
-      background-color: #f3fdf5;
-      color: #333;
-    }
+body {
+  font-family: 'Poppins', serif;
+  background-color: #f3fdf5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-    header {
-      background-color: #2e7d32;
-      color: white;
-      padding: 30px 0;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    nav {
-      background-color: #e8f5e9;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
+nav {
+  background-color: #e8f5e9;
+  padding: 10px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
-    nav a {
-      text-decoration: none;
-      padding: 10px 20px;
-      font-weight: 600;
-      border-radius: 5px;
-      color: #2e7d32;
-      background-color: #a5d6a7;
-      transition: all 0.3s ease;
-    }
+nav a {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #2e7d32;
+  background-color: #a5d6a7;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
 
-    nav a:hover,
-    nav .active {
-      background-color: #2e7d32;
-      color: white;
-    }
+nav a:hover,
+nav .active {
+  background-color: #2e7d32;
+  color: white;
+}
 
-    .stat-box {
-      background-color: white;
-      border-radius: 10px;
-      padding: 25px;
-      max-width: 1000px;
-      margin: 30px auto;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
+.stat-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 30px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 
-    h4 {
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
+h4 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
 
-    .detail-row {
-      margin-bottom: 12px;
-    }
+.detail-row {
+  margin-bottom: 12px;
+}
 
-    .label {
-      font-weight: 600;
-    }
+.label {
+  font-weight: 600;
+}
 
-    table {
-      margin-top: 20px;
-    }
+table {
+  margin-top: 20px;
+  width: 100%;
+}
 
-    /* Warna hijau untuk header tabel */
-    .stat-box table thead tr {
-      background-color: #2e7d32 !important;
-    }
+.stat-box table thead tr {
+  background-color: #2e7d32 !important;
+}
 
-    .stat-box table thead th {
-      background-color: #2e7d32 !important;
-      color: white !important;
-    }
+.stat-box table thead th {
+  background-color: #2e7d32 !important;
+  color: white !important;
+}
 
-    /* Warna putih untuk isi tabel */
-    .stat-box table tbody tr {
-      background-color: #ffffff !important;
-    }
+.stat-box table tbody tr {
+  background-color: #ffffff !important;
+}
+
+/* === RESPONSIVE LAYOUT === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 90%;
+    text-align: center;
+  }
+
+  .stat-box {
+    padding: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  table th, table td {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  header p {
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  table th, table td {
+    font-size: 13px;
+  }
+}
