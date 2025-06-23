@@ -33,6 +33,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
       reports.forEach((report) => {
         const row = document.createElement("tr");
+
+        // Menampilkan snapshot sebagai gambar jika ada
+        const snapshotHtml = report.snapshot
+          ? `<img src="${report.snapshot}" alt="snapshot" style="max-width: 120px; border-radius: 8px;" />`
+          : "-";
+
         row.innerHTML = `
               <td>${report.message || "-"}</td>
               <td>${report.location || "-"}</td>
@@ -40,6 +46,8 @@ document.addEventListener("DOMContentLoaded", async () => {
               <td>${report.category || "-"}</td>
               <td>${report.urgencyLevel || "-"}</td>
               <td>${new Date(report.createdAt).toLocaleString("id-ID")}</td>
+              <td>${snapshotHtml}</td>
+
             `;
         tbody.appendChild(row);
       });

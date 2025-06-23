@@ -1,0 +1,29 @@
+chatbot_realtime.html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRANI - Chatbot 2 Arah</title>
+  <link rel="stylesheet" href="./src/css/chatbot.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+</head>
+<body>
+  <div class="container" style="position: relative">
+    <h2>SIRANI</h2>
+    <button id="sosBtn">🔴 Tombol SOS</button>
+    <video id="video" autoplay muted playsinline></video>
+    <canvas id="overlay" style="position:absolute; top:0; left:0;"></canvas>
+    <div id="chatArea" class="chat-area"></div>
+    <div class="chat-input-row">
+      <input id="chatInput" type="text" placeholder="Ketik pesan..." autocomplete="off" />
+      <button id="sendBtn">Kirim</button>
+    </div>
+    <button id="proceedBtn" style="display:none; margin-top:16px;">Meneruskan Laporan</button>
+  </div>
+  <script src="src/js/chatbot_realtime.js"></script>
+</body>
+</html>
+

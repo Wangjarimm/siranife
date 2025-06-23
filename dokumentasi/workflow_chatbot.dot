@@ -1,0 +1,34 @@
+digraph ChatbotWorkflow {
+    rankdir=LR;
+    node [shape=box, style=rounded, fontname="Arial"];
+
+    User [label="User"];
+    LoadModel [label="Load Model Wajah"];
+    SOS [label="Klik SOS"];
+    Form [label="Isi Formulir & Submit"];
+    Webcam [label="Aktifkan Webcam"];
+    DetectEmotion [label="Deteksi Emosi"];
+    Classify [label="Klasifikasi Kategori"];
+    Location [label="Ambil Lokasi"];
+    PostSOS [label="POST /sos"];
+    PostRespond [label="POST /respond"];
+    BackendResp [label="Respon Backend"];
+    ShowNotif [label="Tampilkan Notifikasi"];
+    ShowResp [label="Tampilkan Respon & Urgensi"];
+
+    User -> LoadModel [label="Buka chatbot.html"];
+    LoadModel -> SOS;
+    LoadModel -> Form;
+    SOS -> Webcam;
+    Form -> Webcam;
+    Webcam -> DetectEmotion;
+    DetectEmotion -> Location;
+    DetectEmotion -> Classify [label="(jika Form)"];
+    Classify -> Location;
+    Location -> PostSOS [label="(jika SOS)"];
+    Location -> PostRespond [label="(jika Form)"];
+    PostSOS -> BackendResp;
+    PostRespond -> BackendResp;
+    BackendResp -> ShowNotif [label="(jika SOS)"];
+    BackendResp -> ShowResp [label="(jika Form)"];
+}
