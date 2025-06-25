@@ -62,13 +62,16 @@ function appendMessage(sender, text) {
 }
 
 function captureSnapshot(video) {
+  const targetWidth = 160;
+  const targetHeight = 120;
   const canvas = document.createElement('canvas');
-  canvas.width = video.videoWidth || 320;
-  canvas.height = video.videoHeight || 240;
+  canvas.width = targetWidth;
+  canvas.height = targetHeight;
   const ctx = canvas.getContext('2d');
-  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-  return canvas.toDataURL('image/png');
+  ctx.drawImage(video, 0, 0, targetWidth, targetHeight);
+  return canvas.toDataURL('image/jpeg', 0.6); // Gunakan JPEG + kompresi
 }
+
 
 async function detectFaceEmotion(video) {
   const detections = await faceapi.detectAllFaces(
