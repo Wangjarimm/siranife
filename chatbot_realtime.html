@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIRANI - Chatbot 2 Arah</title>
-  <link rel="stylesheet" href="./src/css/chatbot.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
-</head>
-<body>
-  <div class="container" style="position: relative">
-    <h2>SIRANI</h2>
-    <button id="sosBtn">🔴 Tombol SOS</button>
-    <video id="video" autoplay muted playsinline></video>
-    <canvas id="overlay" style="position:absolute; top:0; left:0;"></canvas>
-    <div id="chatArea" class="chat-area"></div>
-    <div class="chat-input-row">
-      <input id="chatInput" type="text" placeholder="Ketik pesan..." autocomplete="off" />
-      <button id="sendBtn">Kirim</button>
-    </div>
-    <button id="proceedBtn" style="display:none; margin-top:16px;">Meneruskan Laporan</button>
-  </div>
-  <script src="src/js/chatbot_realtime.js"></script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIRANI - Chatbot 2 Arah</title>
+    <link rel="stylesheet" href="./src/css/chatbot.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,300;0,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container" style="position: relative">
+      <h2>SIRANI</h2>
 
+      <!-- Tombol SOS -->
+      <button id="sosBtn" class="btn-class-name">
+        <span class="back"></span>
+        <span class="front"></span>
+      </button>
+
+      <!-- Video dan Canvas -->
+      <div class="video-wrapper">
+        <video id="video" autoplay muted playsinline></video>
+        <canvas
+          id="overlay"
+          style="position: absolute; top: 0; left: 0"
+        ></canvas>
+      </div>
+
+      <!-- Notifikasi monitoring -->
+      <div
+        id="monitorNotice"
+        style="
+          text-align: center;
+          margin-bottom: 10px;
+          color: #d63384;
+          font-weight: bold;
+        "
+      >
+        ⚠️ Sistem sedang memantau ekspresi wajah Anda di atas kamera
+      </div>
+
+      <!-- Area Chat -->
+      <div id="chatArea" class="chat-area"></div>
+      <div class="chat-input-row">
+        <input
+          id="chatInput"
+          type="text"
+          placeholder="Ketik pesan..."
+          autocomplete="off"
+        />
+        <button id="sendBtn">Kirim</button>
+      </div>
+      <button id="proceedBtn" style="display: none; margin-top: 16px">
+        Meneruskan Laporan
+      </button>
+    </div>
+
+    <!-- External JS -->
+    <script src="./src/js/chatbot_realtime.js"></script>
+  </body>
+</html>
